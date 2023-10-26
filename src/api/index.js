@@ -1,7 +1,6 @@
 const express = require('express');
 
 const tok = require('./tok');
-const { token } = require('morgan');
 
 const router = express.Router();
 

@@ -20,9 +20,9 @@ app.get('/', (req, res) => {
     status: 'ok',
   });
 });
-app.get('/login', function(req, res) {
-  res.send(login);
-});
+// app.get('/login', function(req, res) {
+//   res.send(login);
+// });
 app.use('/Auth', api);
 
 app.use(middlewares.notFound);

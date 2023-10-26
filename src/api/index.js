@@ -1,6 +1,6 @@
 const express = require('express');
 
-const emojis = require('./tok');
+const tok = require('./tok');
 const { token } = require('morgan');
 
 const router = express.Router();

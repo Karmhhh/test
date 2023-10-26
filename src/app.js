@@ -4,8 +4,9 @@ const helmet = require('helmet');
 const cors = require('cors');
 
 require('dotenv').config();
-
+const path = require('path');
 const api = require('./api');
+
 const middlewares = require('./middlewares');
 
 const app = express();
@@ -20,9 +21,11 @@ app.get('/', (req, res) => {
     status: 'ok',
   });
 });
-// app.get('/login', function(req, res) {
-//   res.send();
-// });
+// sendFile will go here
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, '/login/index.html'));
+});
+
 app.use('/Auth', api);
 
 app.use(middlewares.notFound);

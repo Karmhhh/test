@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'ok',
+    status: 'ok',
   });
 });
 app.get('/login', function(req, res) {

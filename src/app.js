@@ -7,7 +7,6 @@ require('dotenv').config();
 
 const middlewares = require('./middlewares');
 const api = require('./api');
-const login = require('./login');
 const app = express();
 
 app.use(morgan('dev'));

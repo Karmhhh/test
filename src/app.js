@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   });
 });
 // app.get('/login', function(req, res) {
-//   res.send(login);
+//   res.send();
 // });
 app.use('/Auth', api);
 

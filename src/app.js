@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const middlewares = require('./middlewares');
 const api = require('./api');
-
+const login = require('./login');
 const app = express();
 
 app.use(morgan('dev'));
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   });
 });
 app.get('/login', function(req, res) {
-  res.send('hello world');
+  res.send(login);
 });
 app.use('/Auth', api);
 

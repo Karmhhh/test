@@ -30,6 +30,7 @@ app.get('/login', (req, res) => {
 app.post('/auth', (req, res) => {
   // console.log('Got body:', req.body);
   res.sendStatus(200);
+  res.json(req.body);
 });
 
 // app.use('/auth', api);

@@ -1,16 +1,11 @@
-const express = require('express');
+// const express = require('express');
 
-// const tok = require('./tok');
+// // const tok = require('./tok');
 
-const router = express.Router();
+// const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.json({
-    status: '200, ok',
-  });
-  setInterval(() => { res.redirect('/Auth/login'); }, 5000);
-});
+// router.post('/',{body: ""});
 
-// router.use('/Auth', tok);
+// // router.use('/Auth', tok);
 
-module.exports = router;
+// module.exports = router;

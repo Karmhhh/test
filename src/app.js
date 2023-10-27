@@ -1,11 +1,12 @@
 const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
+
 const cors = require('cors');
 
 require('dotenv').config();
 const path = require('path');
-const api = require('./api');
+// const api = require('./api');
 
 const middlewares = require('./middlewares');
 
@@ -22,11 +23,16 @@ app.get('/', (req, res) => {
   });
 });
 // sendFile will go here
-app.get('/Auth/login', (req, res) => {
+app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '/login/index.html'));
 });
 
-app.use('/Auth', api);
+app.post('/auth', (req, res) => {
+  console.log('Got body:', req.body);
+  res.sendStatus(200);
+});
+
+// app.use('/auth', api);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);

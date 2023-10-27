@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   });
 });
 // sendFile will go here
-app.get('/login', (req, res) => {
+app.get('/Auth/login', (req, res) => {
   res.sendFile(path.join(__dirname, '/login/index.html'));
 });
 

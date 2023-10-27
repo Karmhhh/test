@@ -28,7 +28,7 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/auth', (req, res) => {
-  console.log('Got body:', req.body);
+  // console.log('Got body:', req.body);
   res.sendStatus(200);
 });
 

@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 });
 // sendFile will go here
 app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, '/reactApp/src/App.js'));
+  res.sendFile(path.join(__dirname, '/login/index.js'));
 });
 
 app.post('/auth', (req, res) => {
